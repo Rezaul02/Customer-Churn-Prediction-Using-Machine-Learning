@@ -64,12 +64,13 @@ sns.heatmap(confusion_matrix(y_test, y_test_pred), annot=True, fmt='d', cmap='Bl
 plt.xlabel('Predicted')<br>
 plt.ylabel('Actual')<br>
 plt.title('Confusion Matrix')<br>
-plt.show()<br>
-![pic3](https://github.com/user-attachments/assets/70d7f118-2a42-4496-9eed-b6a34fe1785f)<br>
+plt.show()<br> 
+![pic1](https://github.com/user-attachments/assets/27e4b9db-1034-43ba-bbec-57db4d83add1)<br>
+
 ![pic2](https://github.com/user-attachments/assets/79a1c369-3692-4806-b4be-fd34bcf70921)
 
 ## Step -7 Feature Importance (For Random Forest): 
-![pic1](https://github.com/user-attachments/assets/27e4b9db-1034-43ba-bbec-57db4d83add1)<br>
+![pic3](https://github.com/user-attachments/assets/70d7f118-2a42-4496-9eed-b6a34fe1785f)<br>
 ## Step 8: Improve the Model : 
 from sklearn.model_selection import GridSearchCV<br>
 
