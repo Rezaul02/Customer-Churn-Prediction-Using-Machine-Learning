@@ -65,5 +65,9 @@ plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.title('Confusion Matrix')
 plt.show()
+![pic3](https://github.com/user-attachments/assets/70d7f118-2a42-4496-9eed-b6a34fe1785f)
+![pic2](https://github.com/user-attachments/assets/79a1c369-3692-4806-b4be-fd34bcf70921)
+
+## Step -7 Feature Importance (For Random Forest): 
 
 
