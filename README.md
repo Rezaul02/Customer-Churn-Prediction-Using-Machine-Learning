@@ -25,4 +25,14 @@ for column in data.select_dtypes(include=['object']).columns:<br>
     label_encoders[column] = le<br>
 
 ## Feature Scaling: Standardize or normalize numerical features for consistent scaling.
+scaler = StandardScaler() 
+numerical_features = data.select_dtypes(include=['float64', 'int64']).columns
+data[numerical_features] = scaler.fit_transform(data[numerical_features])
+
+## Step 4: Split the Data
+X = data.drop(columns=['Churn' , 'customerID'])  
+y = data['Churn']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+## Step 5: Train the Model
+IN this project i  used a Random Forest Classifier
 
