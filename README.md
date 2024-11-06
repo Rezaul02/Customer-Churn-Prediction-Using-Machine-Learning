@@ -1,5 +1,5 @@
 # Customer-Churn-Prediction-Using-Machine-Learning
-
+![pic4](https://github.com/user-attachments/assets/41a4b493-fc9c-44c7-b595-3f22b5ff4cc9)
 ## ✔ Step 1: Import Required Libraries
 import pandas as pd <br>
 import numpy as np<br>
@@ -9,7 +9,7 @@ from sklearn.ensemble import RandomForestClassifier<br>
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, roc_auc_score<br>
 import matplotlib.pyplot as plt<br>
 import seaborn as sns<br>
-##✔Step 2: Load and Inspect the Dataset
+## ✔ Step 2: Load and Inspect the Dataset
 data = pd.read_csv('your_dataset.csv')<br>
 print(data.head())<br>
 print(data.info())<br>
