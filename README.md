@@ -15,7 +15,9 @@ print(data.head())<br>
 print(data.info())<br>
 print(data.describe())<br>
 ## Step 3: Data Preprocessing
+
 In this part i checked the missing value have to Exist or not , if this misssing value have to present i removed it using dropna() function <br>
+### DataSet link ✅  : https://www.kaggle.com/datasets/blastchar/telco-customer-churn
 data.isnull().sum() <br>
 data = data.dropna() <br>
 ## Encode Categorical Variables: Use label encoding or one-hot encoding for categorical features.
