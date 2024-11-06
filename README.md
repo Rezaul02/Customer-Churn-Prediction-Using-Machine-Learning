@@ -14,11 +14,11 @@ data = pd.read_csv('your_dataset.csv')<br>
 print(data.head())<br>
 print(data.info())<br>
 print(data.describe())<br>
-##✔ Step 3: Data Preprocessing
+## Step 3: Data Preprocessing
 In this part i checked the missing value have to Exist or not , if this misssing value have to present i removed it using dropna() function <br>
 data.isnull().sum() <br>
 data = data.dropna() <br>
-## ✔Encode Categorical Variables: Use label encoding or one-hot encoding for categorical features.
+## Encode Categorical Variables: Use label encoding or one-hot encoding for categorical features.
 label_encoders = {}<br>
 for column in data.select_dtypes(include=['object']).columns:<br>
     le = LabelEncoder()<br>
@@ -33,11 +33,11 @@ data[numerical_features] = scaler.fit_transform(data[numerical_features])<br>
 smote = SMOTE(random_state=42) <br>
 X_resampled, y_resampled = smote.fit_resample(X, y) <br>
 
-## ✔Step 4: Split the Data
+## ✔ Step 4: Split the Data
 X = data.drop(columns=['Churn' , 'customerID'])  <br>
 y = data['Churn']<br>
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)<br>
-## ✔Step 5: Train the Model
+## ✔ Step 5: Train the Model
 IN this project i  used a Random Forest Classifier<br>
 param_dist = {
     'n_estimators': [100, 200, 300, 400],<br>
@@ -51,7 +51,7 @@ model = RandomForestClassifier(random_state=42, class_weight='balanced')<br>
 random_search = RandomizedSearchCV(estimator=model, param_distributions=param_dist, n_iter=10, cv=5, scoring='roc_auc', n_jobs=-1, random_state=42)<br>
 random_search.fit(X_train, y_train)<br>
 
-##✔ Step 6: Making  Predictions and Evaluate this project 
+## ✔ Step 6: Making  Predictions and Evaluate this project 
 y_train_pred = best_model.predict(X_train)<br>
 y_test_pred = best_model.predict(X_test)<br>
 
@@ -63,7 +63,7 @@ print("Test Accuracy:", accuracy_score(y_test, y_test_pred) * 100)<br>
 print("Classification Report:\n", classification_report(y_test, y_test_pred))<br>
 y_test_pred_proba = best_model.predict_proba(X_test)[:, 1]<br>
 print("AUC-ROC Score:", roc_auc_score(y_test, y_test_pred_proba))<br>
-## ✔Step 7: Visualize Results<br>
+## ✔ Step 7: Visualize Results<br>
 sns.heatmap(confusion_matrix(y_test, y_test_pred), annot=True, fmt='d', cmap='Blues')<br>
 plt.xlabel('Predicted')<br>
 plt.ylabel('Actual')<br>
@@ -73,9 +73,9 @@ plt.show()<br>
 
 ![pic2](https://github.com/user-attachments/assets/79a1c369-3692-4806-b4be-fd34bcf70921)
 
-## Step✔ -8 Feature Importance (For Random Forest): 
+## Step ✔ -8 Feature Importance (For Random Forest): 
 ![pic3](https://github.com/user-attachments/assets/70d7f118-2a42-4496-9eed-b6a34fe1785f)<br>
-## Step ✔9: Improve the Model : 
+## Step ✔ 9: Improve the Model : 
 from sklearn.model_selection import GridSearchCV<br>
 
 param_grid = {
